@@ -1,15 +1,22 @@
 #include<iostream>
 using namespace std;
 
-//Write the definition of myString() here
+char myString(char *p,int N){
+    char *R = new char;
+    for(int i=0; i<N; i++){
+        R[i] = 'A'+i;
+        cout << R[i];
+    }
+}
 
 int main(){
 	char *p;
-	int N;	
+	int N;
 	cout << "N = ";
-	cin >> N;		
+	cin >> N;
 	myString(p,N);
-	cout << p;	
+	cout << p;
 	delete [] p;
 	return 0;
 }
+
